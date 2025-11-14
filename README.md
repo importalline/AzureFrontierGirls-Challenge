@@ -1,6 +1,5 @@
 # 🎓 Estudaí - Assistente Inteligente de Estudos com Azure AI
 
-<div align="center">
 
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python&logoColor=white)
@@ -11,7 +10,6 @@
 
 [Vídeo](#-vídeo-de-apresentação) • [Demo](#-demonstração) • [Arquitetura](#-arquitetura) • [Deploy](#-deploy) • [Referências](#-referências)
 
-</div>
 
 ---
 
@@ -33,7 +31,6 @@
 
 ## 📹 Vídeo de Apresentação
 
-<div align="center">
 
 
 ### 🎬 Estudaí - Demonstração Completa
@@ -46,7 +43,6 @@
 
 *Mostrando as 5 funcionalidades principais do Estudaí*
 
-</div>
 
 ---
 
@@ -60,7 +56,6 @@
 
 **Duração:** 64 segundos | **Resolução:** 1080p | **Formato:** MP4
 
-<div align="center">
 
 ---
 
@@ -125,16 +120,7 @@ POST /api/buscar
 }
 ```
 
-**Resposta:** Lista de 5 artigos Wikipedia com títulos, URLs e snippets.
 
----
-
-### 2. 📅 Gerador de Cronogramas
-
-
-Cria planos de estudo personalizados distribuindo matérias ao longo da semana.
-**Parâmetros:**
-- Matérias escolhidas pelo estudante
 - Horas disponíveis por dia
 - Dias da semana (seg-dom)
 
