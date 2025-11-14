@@ -21,13 +21,13 @@
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Problema e Solução](#-problema-e-solução)
 - [Funcionalidades](#-funcionalidades)
-- [Arquitetura](#-arquitetura)
+- [Arquitetura](#️-arquitetura)
 - [Demonstração](#-demonstração)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Tecnologias Utilizadas](#️-tecnologias-utilizadas)
 - [Deploy](#-deploy)
 - [Testes](#-testes)
 - [Referências](#-referências)
-- [Autora](#-autora)
+- [Autora](#autora)
 
 ---
 
