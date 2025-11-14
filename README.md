@@ -463,10 +463,6 @@ python -m pytest test_function.py -v
 
 Result: **37 passed in 1.47s** ✅
 
-### Passo a Passo Completo
-
-Para instruções detalhadas de deploy, consulte **[DEPLOY-GUIDE.md](./DEPLOY-GUIDE.md)**.
-
 **Resumo:**
 
 1. **Azure Functions:**
