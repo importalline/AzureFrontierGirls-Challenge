@@ -37,7 +37,7 @@
 
 ### 🎬 Estudaí - Demonstração Completa
 
-https://github.com/importalline/AzureFrontierGirls-Challenge/assets/estudai.mp4
+https://github.com/importalline/AzureFrontierGirls-Challenge/raw/main/azure-function/video/estudai.mp4
 
 *Mostrando as 5 funcionalidades principais do Estudaí*
 
