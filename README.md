@@ -108,6 +108,7 @@ O agente **Estudaí** foi projetado para:
 Busca recursos atualizados na web usando **DuckDuckGo Instant Answer API** e **Wikipedia OpenSearch API**.
 
 **Categorias disponíveis:**
+
 - 📚 Literatura, História, Geografia, Filosofia, Sociologia
 - 🔬 Física, Química, Biologia, Matemática
 - 🌍 Atualidades, Meio Ambiente, Tecnologia
@@ -131,6 +132,7 @@ POST /api/buscar
 Cria planos de estudo personalizados distribuindo matérias ao longo da semana.
 
 **Parâmetros:**
+
 - Matérias escolhidas pelo estudante
 - Horas disponíveis por dia
 - Dias da semana (seg-dom)
@@ -154,6 +156,7 @@ POST /api/gerar-cronograma
 Gera questões de múltipla escolha estilo ENEM com **3 níveis de dificuldade**.
 
 **Níveis:**
+
 - 🟢 **Fácil:** Conceitos básicos
 - 🟡 **Médio:** Aplicação prática
 - 🔴 **Difícil:** Análise complexa
@@ -193,6 +196,7 @@ POST /api/gerar-resumo
 Sistema de pontuação e conquistas para motivar estudantes.
 
 **Conquistas disponíveis:**
+
 - 🔥 **Dedicado:** Estude 7 dias seguidos
 - 🏃 **Maratonista:** Complete 20h de estudo
 - 🎯 **Multitask:** Estude 5 matérias diferentes
@@ -288,6 +292,7 @@ Me busque recursos sobre fotossíntese
 ```
 
 **Fluxo:**
+
 1. Agente interpreta a intenção
 2. Chama função `buscarWeb` via OpenAPI Action
 3. Azure Function consulta DuckDuckGo + Wikipedia
@@ -385,6 +390,7 @@ Mostre meu progresso de estudos
 ### 5️⃣ Integração Completa no AI Foundry
 
 **Playground mostrando:**
+
 - ✅ Agent "Estudaí" configurado
 - ✅ 3 ferramentas ativas (Code Interpreter, File Search, OpenAPI Actions)
 - ✅ OpenAPI spec carregada com 5 operações
@@ -397,6 +403,7 @@ Mostre meu progresso de estudos
 
 > **💡 Documentação Visual Completa:**  
 > A pasta **[`screenshots/`](./screenshots/)** contém mais de 25 capturas de tela mostrando:
+>
 > - 📋 Todo o processo de criação e configuração do Azure AI Foundry
 > - ⚙️ Deploy passo a passo das Azure Functions
 > - 🔧 Configuração das 3 ferramentas (Code Interpreter, File Search, OpenAPI Actions)
@@ -480,6 +487,7 @@ Para instruções detalhadas de deploy, consulte **[DEPLOY-GUIDE.md](./DEPLOY-GU
    - Acesse [ai.azure.com](https://ai.azure.com)
    - Crie Agent "Estudaí"
    - Habilite 3 ferramentas:
+
      - ✅ Code Interpreter
      - ✅ File Search (`dicas-de-estudo.txt`)
      - ✅ OpenAPI Actions (`openapi-ai-foundry.json`)
@@ -557,6 +565,7 @@ test_function.py::test_obter_dashboard_conquistas PASSED        [100%]
 ### Power Automate (Expansão Futura)
 
 Para integração com notificações e calendário:
+
 - [Power Automate Docs](https://learn.microsoft.com/power-automate/)
 - [Azure Functions + Power Automate](https://learn.microsoft.com/azure/azure-functions/functions-flow-scenario)
 - [HTTP Triggers para Power Automate](https://learn.microsoft.com/power-automate/flow-types#cloud-flows)
