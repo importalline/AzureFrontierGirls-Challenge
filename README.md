@@ -35,13 +35,16 @@
 
 <div align="center">
 
+
 ### 🎬 Estudaí - Demonstração Completa
 
-> **📹 Vídeo de demonstração disponível:** O vídeo completo mostrando as 5 funcionalidades principais está disponível na pasta `video/estudai.mp4` deste repositório.
+<a href="https://youtu.be/Ck22f68KG80" target="_blank">
+  <img src="https://img.youtube.com/vi/Ck22f68KG80/0.jpg" alt="Demonstração Estudaí" width="480"/>
+</a>
+
+▶️ [Assista ao vídeo de demonstração no YouTube](https://youtu.be/Ck22f68KG80)
 
 *Mostrando as 5 funcionalidades principais do Estudaí*
-
-**📂 Arquivo local:** [`./video/estudai.mp4`](./video/estudai.mp4)
 
 </div>
 
@@ -105,10 +108,9 @@ O agente **Estudaí** foi projetado para:
 
 ### 1. 🔍 Busca Web Educacional
 
+
 Busca recursos atualizados na web usando **DuckDuckGo Instant Answer API** e **Wikipedia OpenSearch API**.
-
 **Categorias disponíveis:**
-
 - 📚 Literatura, História, Geografia, Filosofia, Sociologia
 - 🔬 Física, Química, Biologia, Matemática
 - 🌍 Atualidades, Meio Ambiente, Tecnologia
@@ -129,10 +131,9 @@ POST /api/buscar
 
 ### 2. 📅 Gerador de Cronogramas
 
+
 Cria planos de estudo personalizados distribuindo matérias ao longo da semana.
-
 **Parâmetros:**
-
 - Matérias escolhidas pelo estudante
 - Horas disponíveis por dia
 - Dias da semana (seg-dom)
@@ -153,10 +154,9 @@ POST /api/gerar-cronograma
 
 ### 3. 📝 Simulados Personalizados
 
+
 Gera questões de múltipla escolha estilo ENEM com **3 níveis de dificuldade**.
-
 **Níveis:**
-
 - 🟢 **Fácil:** Conceitos básicos
 - 🟡 **Médio:** Aplicação prática
 - 🔴 **Difícil:** Análise complexa
@@ -196,7 +196,6 @@ POST /api/gerar-resumo
 Sistema de pontuação e conquistas para motivar estudantes.
 
 **Conquistas disponíveis:**
-
 - 🔥 **Dedicado:** Estude 7 dias seguidos
 - 🏃 **Maratonista:** Complete 20h de estudo
 - 🎯 **Multitask:** Estude 5 matérias diferentes
