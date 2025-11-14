@@ -1,0 +1,151 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Estudaí - API de Pesquisa Web",
+    "description": "API para buscar informações educacionais na web",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://func-estudai-search-web-etbyaefhe7brateb.eastus2-01.azurewebsites.net/api/buscar",
+      "description": "Azure Function - Produção"
+    }
+  ],
+  "paths": {
+    "/buscar": {
+      "post": {
+        "summary": "Buscar informações na web",
+        "description": "Busca conteúdo educacional relevante baseado na query fornecida",
+        "operationId": "buscarWeb",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["query"],
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "description": "Termo de busca (ex: 'técnicas de memorização', 'como estudar matemática')",
+                    "example": "técnicas de estudo"
+                  },
+                  "max_results": {
+                    "type": "integer",
+                    "description": "Número máximo de resultados (padrão: 5)",
+                    "default": 5,
+                    "minimum": 1,
+                    "maximum": 10
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resultados da busca",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string",
+                      "description": "Termo buscado"
+                    },
+                    "total_resultados": {
+                      "type": "integer",
+                      "description": "Quantidade de resultados encontrados"
+                    },
+                    "resultados": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "titulo": {
+                            "type": "string",
+                            "description": "Título do resultado"
+                          },
+                          "url": {
+                            "type": "string",
+                            "description": "URL do recurso"
+                          },
+                          "snippet": {
+                            "type": "string",
+                            "description": "Trecho descritivo do conteúdo"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "query": "técnicas de estudo",
+                  "total_resultados": 3,
+                  "resultados": [
+                    {
+                      "titulo": "Técnica Pomodoro - Estudo Focado",
+                      "url": "https://exemplo.com/pomodoro",
+                      "snippet": "Estude por 25 minutos, descanse 5. Aumente sua produtividade!"
+                    },
+                    {
+                      "titulo": "Mapas Mentais para Aprendizado",
+                      "url": "https://exemplo.com/mapas",
+                      "snippet": "Organize ideias visualmente e melhore a retenção"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Requisição inválida",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "erro": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro interno do servidor",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "erro": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "function_key": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "function_key": {
+        "type": "apiKey",
+        "name": "code",
+        "in": "query",
+        "description": "Chave de função do Azure Functions"
+      }
+    }
+  }
+}

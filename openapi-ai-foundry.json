@@ -1,0 +1,271 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "PesquisaWeb",
+    "version": "2.0.0",
+    "description": "Plataforma completa de estudos com pesquisa web, cronogramas, simulados, resumos e dashboard de progresso"
+  },
+  "servers": [
+    {
+      "url": "https://func-estudai-search-web-etbyaefhe7brateb.eastus2-01.azurewebsites.net/api"
+    }
+  ],
+  "paths": {
+    "/buscar": {
+      "post": {
+        "operationId": "buscarWeb",
+        "summary": "Buscar conteúdo educacional",
+        "description": "Busca recursos educacionais, técnicas de estudo, dicas e materiais didáticos relevantes",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["query"],
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "description": "O que você quer buscar (ex: 'técnicas de memorização', 'como estudar história')"
+                  },
+                  "max_results": {
+                    "type": "integer",
+                    "description": "Quantidade de resultados (padrão: 5)",
+                    "default": 5
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resultados encontrados"
+          }
+        }
+      }
+    },
+    "/gerar-cronograma": {
+      "post": {
+        "operationId": "gerarCronograma",
+        "summary": "Gerar cronograma de estudos",
+        "description": "Cria um cronograma semanal personalizado distribuindo matérias de forma inteligente",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["materias"],
+                "properties": {
+                  "materias": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Lista de matérias para estudar",
+                    "example": ["Matematica", "Fisica", "Quimica"]
+                  },
+                  "dias_semana": {
+                    "type": "integer",
+                    "description": "Quantos dias por semana estudar (1-7)",
+                    "default": 5,
+                    "minimum": 1,
+                    "maximum": 7
+                  },
+                  "horas_dia": {
+                    "type": "integer",
+                    "description": "Horas de estudo por dia (1-12)",
+                    "default": 3,
+                    "minimum": 1,
+                    "maximum": 12
+                  },
+                  "prioridades": {
+                    "type": "object",
+                    "description": "Peso de cada matéria (maior = mais tempo)",
+                    "additionalProperties": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Cronograma gerado com sucesso"
+          }
+        }
+      }
+    },
+    "/gerar-simulado": {
+      "post": {
+        "operationId": "gerarSimulado",
+        "summary": "Gerar simulado personalizado",
+        "description": "Cria um simulado com questões de múltipla escolha para treinar conhecimentos",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["materia"],
+                "properties": {
+                  "materia": {
+                    "type": "string",
+                    "description": "Matéria do simulado (ex: 'Matematica', 'Fisica', 'Quimica')",
+                    "example": "Matematica"
+                  },
+                  "num_questoes": {
+                    "type": "integer",
+                    "description": "Número de questões (1-20)",
+                    "default": 5,
+                    "minimum": 1,
+                    "maximum": 20
+                  },
+                  "dificuldade": {
+                    "type": "string",
+                    "description": "Nível de dificuldade",
+                    "enum": ["facil", "medio", "dificil"],
+                    "default": "medio"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Simulado gerado com questões, alternativas e respostas corretas"
+          }
+        }
+      }
+    },
+    "/gerar-resumo": {
+      "post": {
+        "operationId": "gerarResumo",
+        "summary": "Gerar resumo estruturado",
+        "description": "Cria resumo completo de um tópico com mapas mentais e técnicas de estudo",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["topico"],
+                "properties": {
+                  "topico": {
+                    "type": "string",
+                    "description": "Tópico a ser resumido (ex: 'fotossintese', 'segunda guerra')",
+                    "example": "fotossintese"
+                  },
+                  "materia": {
+                    "type": "string",
+                    "description": "Matéria relacionada (opcional)",
+                    "example": "biologia"
+                  },
+                  "tipo": {
+                    "type": "string",
+                    "description": "Tipo de resumo desejado",
+                    "enum": ["rapido", "completo", "detalhado"],
+                    "default": "completo"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resumo estruturado com conceito, pontos principais e dicas"
+          }
+        }
+      }
+    },
+    "/registrar-progresso": {
+      "post": {
+        "operationId": "registrarProgresso",
+        "summary": "Registrar progresso de estudo",
+        "description": "Registra tempo estudado e tópicos concluídos, retorna pontos e motivação",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["materia", "tempo_minutos"],
+                "properties": {
+                  "usuario_id": {
+                    "type": "string",
+                    "description": "ID do usuário (opcional)",
+                    "default": "default"
+                  },
+                  "materia": {
+                    "type": "string",
+                    "description": "Matéria estudada",
+                    "example": "Matematica"
+                  },
+                  "tempo_minutos": {
+                    "type": "integer",
+                    "description": "Tempo estudado em minutos",
+                    "minimum": 1,
+                    "example": 60
+                  },
+                  "topicos_estudados": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Lista de tópicos estudados",
+                    "example": ["equacoes", "funcoes", "geometria"]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Progresso registrado com estatísticas e pontos conquistados"
+          }
+        }
+      }
+    },
+    "/obter-dashboard": {
+      "post": {
+        "operationId": "obterDashboard",
+        "summary": "Obter dashboard de progresso",
+        "description": "Retorna estatísticas, conquistas, gráficos e recomendações personalizadas",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "usuario_id": {
+                    "type": "string",
+                    "description": "ID do usuário (opcional)",
+                    "default": "default"
+                  },
+                  "periodo": {
+                    "type": "string",
+                    "description": "Período do dashboard",
+                    "enum": ["diario", "semanal", "mensal"],
+                    "default": "semanal"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Dashboard com estatísticas, distribuição de matérias, conquistas e metas"
+          }
+        }
+      }
+    }
+  }
+}

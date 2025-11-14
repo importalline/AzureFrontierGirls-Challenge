@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Azure Functions
+.python_packages/
+.vscode/
+local.settings.json
+.funcignore
+
+# OS
+.DS_Store
+Thumbs.db
