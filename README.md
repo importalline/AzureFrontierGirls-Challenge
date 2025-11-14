@@ -407,7 +407,7 @@ Mostre meu progresso de estudos
 |---------|-----|--------------|
 | **Azure AI Foundry** | Agente conversacional com ferramentas | [Docs](https://learn.microsoft.com/azure/ai-studio/) |
 | **Azure Functions** | Serverless compute para 5 funções | [Docs](https://learn.microsoft.com/azure/azure-functions/) |
-| **Azure OpenAPI** | Integração Functions ↔ Agent | [Docs](https://learn.microsoft.com/azure/ai-studio/how-to/tools/add-custom-api) |
+| **Azure OpenAPI** | Integração Functions ↔ Agent | [Docs](https://learn.microsoft.com/en-us/azure/ai-foundry/) |
 
 ### APIs Externas (Gratuitas)
 
@@ -522,10 +522,10 @@ test_function.py::test_obter_dashboard_conquistas PASSED        [100%]
 | Recurso | Link |
 |---------|------|
 | **Azure AI Foundry** | https://learn.microsoft.com/azure/ai-studio/ |
-| **Azure AI Agents** | https://learn.microsoft.com/azure/ai-studio/concepts/agents |
-| **Code Interpreter** | https://learn.microsoft.com/azure/ai-studio/how-to/tools/code-interpreter |
-| **File Search** | https://learn.microsoft.com/azure/ai-studio/how-to/tools/file-search |
-| **OpenAPI Actions** | https://learn.microsoft.com/azure/ai-studio/how-to/tools/add-custom-api |
+| **Azure AI Agents** | https://learn.microsoft.com/en-us/python/api/overview/azure/ai-agents-readme?view=azure-python |
+| **Code Interpreter** | https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/code-interpreter?tabs=python |
+| **File Search** | https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/file-search?tabs=python |
+| **OpenAPI Actions** | https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/responses?tabs=python-key |
 | **Azure Functions** | https://learn.microsoft.com/azure/azure-functions/ |
 | **Python Functions** | https://learn.microsoft.com/azure/azure-functions/functions-reference-python |
 | **OpenAPI 3.0 Spec** | https://swagger.io/specification/ |
@@ -541,14 +541,14 @@ test_function.py::test_obter_dashboard_conquistas PASSED        [100%]
 
 - [Building AI Agents with Azure AI Foundry](https://techcommunity.microsoft.com/blog/aiplatformblog/building-ai-agents-with-azure-ai-foundry/4350841)
 - [Deploy Azure Functions with VS Code](https://learn.microsoft.com/azure/azure-functions/functions-develop-vs-code)
-- [OpenAPI Integration Best Practices](https://learn.microsoft.com/azure/ai-studio/how-to/tools/custom-api-best-practices)
+- [OpenAPI Integration Best Practices](https://learn.openapis.org/best-practices.html)
 
 ### Power Automate (Expansão Futura)
 
 Para integração com notificações e calendário:
 
 - [Power Automate Docs](https://learn.microsoft.com/power-automate/)
-- [Azure Functions + Power Automate](https://learn.microsoft.com/azure/azure-functions/functions-flow-scenario)
+- [Azure Functions + Power Automate](https://learn.microsoft.com/pt-br/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
 - [HTTP Triggers para Power Automate](https://learn.microsoft.com/power-automate/flow-types#cloud-flows)
 
 ---
