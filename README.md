@@ -37,7 +37,7 @@
 
 ### 🎬 Estudaí - Demonstração Completa
 
-[📹 **Assistir ao vídeo de demonstração**](https://github.com/importalline/AzureFrontierGirls-Challenge/blob/main/azure-function/video/estudai.mp4)
+> **📹 Vídeo de demonstração disponível:** O vídeo completo mostrando as 5 funcionalidades principais está disponível na pasta `video/estudai.mp4` deste repositório.
 
 *Mostrando as 5 funcionalidades principais do Estudaí*
 
