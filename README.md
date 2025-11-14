@@ -577,10 +577,10 @@ Para integração com notificações e calendário:
 
 **Alline Venciguerra**
 
-- 🏆 Azure Frontier Girls Challenge 2024
-- 💼 LinkedIn: [linkedin.com/in/allinevenciguerra](https://linkedin.com/in/allinevenciguerra)
-- 🐙 GitHub: [github.com/allinevenciguerra](https://github.com/allinevenciguerra)
-- 📧 Email: alline.venciguerra@example.com
+- 🏆 Azure Frontier Girls Challenge 2025
+- 💼 LinkedIn: [linkedin.com/in/allinevenciguerra](https://www.linkedin.com/in/alline-venciguerra-69a510318/)
+- 🐙 GitHub: [github.com/importalline](https://github.com/importalline)
+- 📧 Email: allinevenciguerra@gmail.com
 
 ---
 
